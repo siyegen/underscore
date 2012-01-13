@@ -365,6 +365,7 @@ $(document).ready(function() {
     ok(_.isEmpty(), 'undefined is empty');
     ok(_.isEmpty(''), 'the empty string is empty');
     ok(!_.isEmpty('moe'), 'but other strings are not');
+    ok(!_.isEmpty(1), '1 is not empty');
 
     var obj = {one : 1};
     delete obj.one;
