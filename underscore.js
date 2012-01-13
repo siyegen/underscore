@@ -762,6 +762,7 @@
   // An "empty" object has no enumerable own-properties.
   _.isEmpty = function(obj) {
     if (_.isArray(obj) || _.isString(obj)) return obj.length === 0;
+    if (_.isNumber(obj) && !_.isNaN(obj)) return false;
     for (var key in obj) if (hasOwnProperty.call(obj, key)) return false;
     return true;
   };
